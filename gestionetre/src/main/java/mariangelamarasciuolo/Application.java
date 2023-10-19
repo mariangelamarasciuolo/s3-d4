@@ -1,14 +1,16 @@
 package mariangelamarasciuolo;
 
-import mariangelamarasciuolo.entities.*;
+import mariangelamarasciuolo.entities.Evento;
+import mariangelamarasciuolo.entities.EventoDAO;
+import mariangelamarasciuolo.entities.Partecipazione;
+import mariangelamarasciuolo.entities.PartecipazioneDAO;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import java.time.LocalDate;
 
 public class Application {
-    private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("gestionedue");
+    private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("gestionetre");
 
     public static void main(String[] args) {
 
@@ -29,21 +31,21 @@ public class Application {
             System.out.println("Hello World!");
 
             // 1. Salvataggio nuovo evento
-            Evento evento1 = new Evento("Comicon", LocalDate.of(2023, 10, 20), "Videogame", TipoEvento.PUBBLICO, 200);
-            sd.save(evento1);
+            //Evento evento1 = new Evento("Comicon", LocalDate.of(2023, 10, 20), "Videogame", TipoEvento.PUBBLICO, 200);
+            //sd.save(evento1);
 
             //salvo secondo evento
-            Evento evento2 = new Evento("Italia alla moda", LocalDate.of(2023, 12, 8), "Sfilata di Grandi Marche", TipoEvento.PRIVATO, 80);
-            sd.save(evento2);
+            // Evento evento2 = new Evento("Italia alla moda", LocalDate.of(2023, 12, 8), "Sfilata di Grandi Marche", TipoEvento.PRIVATO, 80);
+            // sd.save(evento2);
 
             // 2. Find By Id
-            Evento evento = sd.findById(1);
-            if (evento != null)
-                System.out.println(evento1);
+            //Evento evento = sd.findById(1);
+            // if (evento != null)
+            //    System.out.println(evento1);
 
-            Evento eventob = sd.findById(2);
-            if (eventob != null)
-                System.out.println(evento2);
+            // Evento eventob = sd.findById(2);
+            // if (eventob != null)
+            //   System.out.println(evento2);
 
 
             // 3. Find By Id And Delete
